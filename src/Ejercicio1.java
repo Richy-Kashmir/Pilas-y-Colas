@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Stack;
+
 
 public class Ejercicio1 {
     public static void main (String[] args){
@@ -8,12 +8,12 @@ public class Ejercicio1 {
         System.out.print("Introduce una línea de texto: ");
         String texto = leer.nextLine();
 
-        // crear la pila de caracteres
-        Stack<Character> pila = new Stack<>();
+        // Llamamos a la clase Pilas y creamos un objeto
+        Pilas pila = new Pilas(texto.length());
 
         // Ahora el "PUSH" para apilar
-        for (int i=0; i<texto.length(); i++){
-            pila.push(texto.charAt(i));
+        for (char c : texto.toCharArray()) {
+            pila.push(c);
         }
 
         // desapilar y mostrar
